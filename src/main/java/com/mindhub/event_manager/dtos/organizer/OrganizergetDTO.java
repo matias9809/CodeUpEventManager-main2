@@ -1,6 +1,7 @@
 package com.mindhub.event_manager.dtos.organizer;
 
-import com.mindhub.event_manager.dtos.event.EventDTO;
+
+import com.mindhub.event_manager.dtos.event.EventDetailDTO;
 import com.mindhub.event_manager.enums.CustomerRol;
 import com.mindhub.event_manager.models.Organizer;
 import lombok.Getter;
@@ -16,7 +17,7 @@ public class OrganizergetDTO {
     private String lastname;
     private String email;
     private CustomerRol rol;
-    private List<EventDTO> listEvent;
+    private List<EventDetailDTO> listEvent;
 
 
     public OrganizergetDTO(Organizer organizer){
@@ -25,7 +26,7 @@ public class OrganizergetDTO {
         this.name= organizer.getName();
         this.lastname= organizer.getName();
         this.rol=organizer.getRol();
-        this.listEvent=organizer.getEvents().stream().map(EventDTO::new).collect(Collectors.toList());
+        this.listEvent=organizer.getEvents().stream().map(EventDetailDTO::new).collect(Collectors.toList());
     }
 
 }

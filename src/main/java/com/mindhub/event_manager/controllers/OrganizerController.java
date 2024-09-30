@@ -1,6 +1,6 @@
 package com.mindhub.event_manager.controllers;
 
-import com.mindhub.event_manager.dtos.event.EventDTO;
+
 import com.mindhub.event_manager.dtos.organizer.OrganizergetDTO;
 import com.mindhub.event_manager.models.Customer;
 import com.mindhub.event_manager.models.Organizer;
